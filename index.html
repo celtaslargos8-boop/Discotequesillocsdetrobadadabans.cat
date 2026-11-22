@@ -1,24 +1,49 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Web en Cloudflare Pages</title>
+    <title>Mi Web con PDF Incrustado</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 50px;
+            margin: 0;
+            padding: 20px;
             background-color: #f4f4f9;
-            color: #333;
+            text-align: center;
         }
         h1 {
-            color: #f38020; /* Color naranja característico de Cloudflare */
+            color: #333;
+        }
+        /* Contenedor para hacer el PDF adaptable y centrado */
+        .pdf-container {
+            width: 80%;
+            max-width: 900px;
+            height: 600px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
 <body>
-    <h1>¡Hola, mundo! 🚀</h1>
-    <p>Mi página web básica ya está funcionando en Cloudflare Pages.</p>
+
+    <h1>Bienvenido a mi documento</h1>
+    <p>Aquí puedes visualizar el archivo PDF directamente en la página:</p>
+
+    <!-- Contenedor del PDF -->
+    <div class="pdf-container">
+        <iframe src="mi-documento.pdf" title="Documento PDF">
+            <p>Tu navegador no soporta la visualización de PDFs. Puedes 
+               <a href="mi-documento.pdf">descargar el PDF aquí</a>.
+            </p>
+        </iframe>
+    </div>
+
 </body>
 </html>
